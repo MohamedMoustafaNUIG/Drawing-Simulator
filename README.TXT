@@ -1,12 +1,5 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
-------------------------------------------------------------------------
-
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE:Drawing Simulator
+PURPOSE OF PROJECT:Getting familiar with inhertiance, Composite Design Pattern, and recursion
+AUTHORS:Mohamed Moustafa
+DESCRIPTION:
+The program illustrates how a Drawing object may be composed of another Drawing object and Shape objects such as Rectangles, Cones, or Squares. It can print what objects compose a drawing as well as use recursion to mutate the colour field of each object shape inside a drawing.
