@@ -2,7 +2,6 @@ import java.util.ArrayList;
 public class Drawing
 {
     private ArrayList<Drawing> components;
-
     
     public Drawing()
     {
@@ -14,9 +13,9 @@ public class Drawing
         String input = col.toLowerCase();
         if(input.equals("black")||input.equals("blue")||input.equals("red"))
         {
-            for(Drawing output:components)
+            for(Drawing illustration:components)
             {
-                output.setColour(col);     
+                illustration.setColour(col);     
             }
         }else{
             throw new IllegalArgumentException("Invalid colour! " + col);

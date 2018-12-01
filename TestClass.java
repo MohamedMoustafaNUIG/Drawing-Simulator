@@ -3,7 +3,13 @@ public class TestClass
 
     public static void main(String[] args)
     {
-        Shape cube1 = new Cube();
+        TestClass tc = new TestClass();
+        tc.test();
+    }
+    
+    public void test()
+    {
+        Shape triangle1 = new Triangle();
         Shape rectangle1 = new Rectangle();
         Shape cone1 = new Cone();
         Shape rectangle2 = new Rectangle();
@@ -12,15 +18,24 @@ public class TestClass
         Drawing drawing2 = new Drawing();
         Drawing drawing3 = new Drawing();
         
-        drawing3.add(cube1);
+        drawing3.add(triangle1);
         drawing2.add(rectangle1);
         drawing2.add(rectangle2);
         drawing1.add(cone1);
         drawing1.add(drawing3);
         drawing1.add(drawing2);
         
-        drawing1.setColour("black");
-        drawing2.setColour("black");
+        try{
+           drawing1.setColour("black"); 
+        }catch(IllegalArgumentException e){
+           System.out.println(e.getMessage()); 
+        }
+        
+        try{
+           drawing2.setColour("black"); 
+        }catch(IllegalArgumentException e){
+           System.out.println(e.getMessage()); 
+        }
         
         drawing2.print();
         
@@ -29,9 +44,18 @@ public class TestClass
         drawing2.print();
         drawing3.print();
         
-        drawing3.setColour("Red");
+        try{
+           drawing3.setColour("Red"); 
+        }catch(IllegalArgumentException e){
+           System.out.println(e.getMessage()); 
+        }
         
         drawing3.print();
-        drawing1.setColour("bleu");
+        
+        try{
+           drawing1.setColour("bleu"); 
+        }catch(IllegalArgumentException e){
+           System.out.println(e.getMessage()); 
+        }
     }
 }
